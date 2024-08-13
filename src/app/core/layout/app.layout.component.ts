@@ -6,12 +6,13 @@ import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppTopBarComponent } from './app.topbar.component';
 import { AppFooterComponent } from './app.footer.component';
 import { NgClass } from '@angular/common';
+import { AppConfigComponent } from './config/app.config.component';
 
 @Component({
     selector: 'app-layout',
     templateUrl: './app.layout.component.html',
     standalone: true,
-    imports: [NgClass, AppTopBarComponent, AppSidebarComponent, RouterOutlet, AppFooterComponent]
+    imports: [NgClass, AppTopBarComponent, AppSidebarComponent, RouterOutlet, AppFooterComponent, AppConfigComponent]
 })
 export class AppLayoutComponent implements OnDestroy {
 

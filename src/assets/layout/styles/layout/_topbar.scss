@@ -148,8 +148,19 @@
             }
         }
     }
-}
+    .menu_links ul {
 
+      display: flex;
+      justify-content: center;
+
+    }
+}
+.menu_links {
+
+    display: flex;
+    justify-content: end;
+
+  }
 .menu_links a{
     font-family: 'Roboto';
     color: #030080;

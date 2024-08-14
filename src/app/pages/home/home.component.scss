@@ -24,9 +24,9 @@
 
 .banner_paper, .card_paper {
     padding: 3rem;
-    -webkit-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.18);
-    -moz-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.18);
-    box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.30);
+    box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.30);
 }
 
 .title {
@@ -119,7 +119,7 @@ color:#030080
 
 .image_profile img{
     margin-top: 3rem;
-    max-width: 300px;
+    max-width: 100%;
 }
 
 .profile_text
@@ -136,3 +136,22 @@ color:#030080
     font-size: 1.3em;
     text-align: justify;
  }
+
+
+
+ @media (max-width: 991px) {
+    .image_title img{
+
+        display: none;
+    }
+    .sub_title {
+        font-family: 'Roboto';
+        font-weight: 200;
+        font-size: 1.5em;
+        max-width:100% ;
+    }
+    .phrase h2{
+        font-weight: 200;
+        max-width: 100%;
+    }
+}

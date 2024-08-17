@@ -1,32 +1,51 @@
 <div class="container">
     <div class="align_center">
-        <div class="layout-topbar">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="logo">
-                           <h2><span>Dev</span>Luccas</h2>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 menu_links">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CURRÍCULO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">SOBRE</a>
-                            </li>
-                            <li class="nav-item link_buttom">
-                                <a class="nav-link" href="#">CONTATE-ME</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="layout-topbar">
+        <div class="container">
+          <div class="topbar_grid grid_cl_2">
+            <div class="">
+              <div class="logo">
+                <h2><span>Dev</span>Luccas</h2>
+              </div>
             </div>
+
+            <div class=" menu_links">
+              <ul class="nav">
+                <li class="nav-item menu_text">
+                  <a routerLink="" class="nav-link">HOME</a>
+                  <span class="material-symbols-outlined menu_icons">
+                    home
+                    </span>
+
+                </li>
+                <li class="nav-item menu_text">
+                  <a class="nav-link" routerLink="portfolio">PORTFÓLIO</a>
+                  <span class="material-symbols-outlined menu_icons">
+                    description
+                    </span>
+                </li>
+
+                <li class="nav-item menu_text">
+                  <a class="nav-link" href="#">SOBRE</a>
+                  <span class="material-symbols-outlined menu_icons">
+                    info
+                    </span>
+                </li>
+                <li class="nav-item menu_text link_buttom">
+                  <a class="nav-link" href="#">CONTATE-ME</a>
+                  <span class="material-symbols-outlined menu_icons">
+                    call
+                    </span>
+                </li>
+              </ul>
+            </div>
+            <div class=" d-flex justify-content-center align-items-center theme_mode">
+                <span class="material-symbols-outlined"  (click)="toggleTheme()">
+                    {{light_mode}}
+                </span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>

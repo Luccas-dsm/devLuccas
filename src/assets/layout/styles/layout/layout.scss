@@ -1,4 +1,4 @@
-@import './_variables';
+@import "./_variables";
 @import "./_mixins";
 @import "./_preloading";
 @import "./_main";
@@ -10,3 +10,28 @@
 @import "./_responsive";
 @import "./_utils";
 @import "./_typography";
+
+body {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.section_title {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    h4 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1.5em;
+    }
+}

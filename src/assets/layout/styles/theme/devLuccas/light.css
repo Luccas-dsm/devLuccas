@@ -1,0 +1,59 @@
+[data-theme="light"] {
+
+    font-family: 'Roboto';
+    /* Cores gerais */
+    --primary-color: #327ad9; /* Cor primária do tema */
+    --secondary-color: #4178bf; /* Cor secundária do tema */
+    --accent-color: #80bdf2; /* Cor de destaque */
+    --text-color: #1b3659; /* Cor principal do texto */
+    --background-color: #fff; /* Cor de fundo geral */
+
+    /* Cores de elementos específicos */
+    --menu-floating-color: #ffffff; /* Cor do menu flutuante */
+    --banner-background-color: #327ad9; /* Cor de fundo do banner */
+    --banner-text-color: #ffffff; /* Cor do texto do banner */
+    --banner-text-secondary-color: #1b3659; /* Cor do segundo texto do banner */
+    --card-background-color: #ffffff; /* Cor de fundo do card */
+    --section-primary-background-color: #fff; /* Cor de fundo da seção primária */
+    --section-secondary-background-color: #f2f2f2; /* Cor de fundo da seção secundária */
+    --button-background-color: #327ad9; /* Cor de fundo do botão */
+    --button-text-color: #ffffff; /* Cor do texto do botão */
+    --button-hover-color: #80bdf2; /* Cor do botão ao passar o mouse */
+    --logo-dev-color: #327ad9; /* Cor do logo Dev */
+    --logo-luccas-color: #1b3659; /* Cor do logo Luccas */
+    /* Cores de estados */
+    --success-color: #2ecc71; /* Cor de sucesso */
+    --error-color: #e74c3c; /* Cor de erro */
+    --warning-color: #f1c40f; /* Cor de aviso */
+    --info-color: #3498db; /* Cor de informação */
+  }
+
+  [data-theme="dark"] {
+
+    font-family: 'Roboto';
+    /* Cores gerais */
+    --primary-color: #5a9bf6; /* Cor primária do tema (ajustada para contraste) */
+    --secondary-color: #528ccc; /* Cor secundária do tema (ajustada para contraste) */
+    --accent-color: #a0d1f9; /* Cor de destaque */
+    --text-color: #f0f4fa; /* Cor principal do texto */
+    --background-color: #1b3659; /* Cor de fundo geral */
+
+    /* Cores de elementos específicos */
+    --menu-floating-color: #2b3a59; /* Cor do menu flutuante */
+    --banner-background-color: #327ad9; /* Cor de fundo do banner */
+    --banner-text-color: #ffffff; /* Cor do texto do banner */
+    --banner-text-secondary-color: #1b3659; /* Cor do segundo texto do banner */
+    --card-background-color: #2b3a59; /* Cor de fundo do card */
+    --section-primary-background-color: #243b55; /* Cor de fundo da seção primária */
+    --section-secondary-background-color: #1b2c46; /* Cor de fundo da seção secundária */
+    --button-background-color: #5a9bf6; /* Cor de fundo do botão */
+    --button-text-color: #ffffff; /* Cor do texto do botão */
+    --button-hover-color: #a0d1f9; /* Cor do botão ao passar o mouse */
+    --logo-dev-color: #327ad9; /* Cor do logo Dev */
+    --logo-luccas-color: #f0f4fa; /* Cor do logo Luccas */
+    /* Cores de estados */
+    --success-color: #27ae60; /* Cor de sucesso */
+    --error-color: #c0392b; /* Cor de erro */
+    --warning-color: #e67e22; /* Cor de aviso */
+    --info-color: #2980b9; /* Cor de informação */
+  }

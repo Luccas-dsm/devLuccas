@@ -19,8 +19,10 @@ body {
 }
 
 section {
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 2.5rem;
+    padding-top: 2rem;
+
 }
 .section_title {
     text-align: center;
@@ -35,6 +37,10 @@ section {
         font-size: 1.5em;
     }
 }
+.section_secondary {
+    background-color: var(--section-secondary-background-color);
+}
+
 
 @media (max-width: 500px) {
     .section_title {

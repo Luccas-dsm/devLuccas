@@ -20,12 +20,12 @@ body {
 
 section {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 .section_title {
     text-align: center;
-    color: var(--text-color);
     margin-bottom: 3rem;
+    color: var(--text-color);
     h4 {
         font-weight: 700;
         font-size: 2rem;
@@ -33,5 +33,11 @@ section {
     p {
         font-weight: 300;
         font-size: 1.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .section_title {
+        margin-bottom: 2rem;
     }
 }

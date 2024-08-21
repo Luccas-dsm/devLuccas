@@ -37,15 +37,6 @@
     }
 }
 
-.background_top {
-    background-color: #317ad9;
-    padding-top: 8rem;
-    padding-bottom: 3rem;
-    -webkit-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.3);
-    box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.3);
-}
-
 .title,
 .sub_title {
     -webkit-animation: tracking-in-expand 0.7s
@@ -53,44 +44,24 @@
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 .title {
-    margin-top: 3rem;
-    font-family: "Roboto";
     font-weight: 700;
     text-align: center;
-    color: #fff;
+    color: var(--banner-text-color);
 }
 
 .sub_title {
-    font-family: "Roboto";
     font-weight: 200;
     font-size: 1.5em;
-    color: #fff;
+    color: var(--banner-text-color);
 }
 
 
 
 /*PHRASE*/
 .phrase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 3rem;
-    font-family: "Roboto";
-    color: #030080;
     margin-bottom: 6rem;
 }
-
-.phrase h2 {
-    font-weight: 300;
-    max-width: 40%;
-}
-.phrase span {
-    font-weight: 500;
-    font-size: 1em !important;
-}
-
-
 
 /*Card Projetos*/
 
@@ -101,6 +72,15 @@
 
 
 @media (max-width: 991px) {
+
+    .title {
+        font-size: 1.5rem;
+    }
+    .sub_title {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
     .card_grid_projetos{
         grid-template-columns: 1fr 1fr 1fr;
 

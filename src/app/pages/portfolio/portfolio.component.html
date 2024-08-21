@@ -1,35 +1,28 @@
-<div class="background_top">
-    <section class="container">
-        <div class="row">
-            <div
-                class="col-md-12 d-flex justify-content-center align-items-center"
-            >
-                <div>
-                    <h1 class="title title_primary">
-                        Bem vindo ao meu portifólio!
-                    </h1>
-                    <p class="sub_title">
-                        Aqui tem todos projetos desenvolvidos, artigos e
-                        referências.
-                    </p>
-                </div>
+<app-banner>
+    <div class="row">
+        <div
+            class="col-md-12 d-flex justify-content-center align-items-center"
+        >
+            <div>
+                <h1 class="title title_primary">
+                    Bem vindo ao meu portifólio!
+                </h1>
+                <p class="sub_title">
+                    Aqui tem todos projetos desenvolvidos, artigos e
+                    referências.
+                </p>
             </div>
         </div>
-    </section>
-</div>
-
+    </div>
+</app-banner>
 <section class="container section_default">
     <div class="row">
      <app-section-title class="phrase" title="Projetos" sub_title="Aqui há alguns projetos"></app-section-title>
 
-        <div class="col-md-12 card_grid_projetos">
-          <app-card-project title="Lunar" description="Projeto feito em Angular, voltado na experiência do usuário" imageSoruce = "../../../assets/images/lua.jpg" ></app-card-project>
-          <app-card-project title="Lunar" description="Projeto feito em Angular, voltado na experiência do usuário" imageSoruce = "../../../assets/images/lua.jpg" ></app-card-project>
-          <app-card-project title="Lunar" description="Projeto feito em Angular, voltado na experiência do usuário" imageSoruce = "../../../assets/images/lua.jpg" ></app-card-project>
-          <app-card-project title="Lunar" description="Projeto feito em Angular, voltado na experiência do usuário" imageSoruce = "../../../assets/images/lua.jpg" ></app-card-project>
-          <app-card-project title="Lunar" description="Projeto feito em Angular, voltado na experiência do usuário" imageSoruce = "../../../assets/images/lua.jpg" ></app-card-project>
-
+        <div class="col-md-12 card_grid_projetos" *ngFor="let artigo of artigos">
+          <app-card-project title="{{artigo.titulo}}" description="{{artigo.descricao}}" imageSoruce = "{{artigo.capa}}" ></app-card-project>
         </div>
+
     </div>
 </section>
 

@@ -21,46 +21,37 @@
     display: grid;
 }
 .grid_cl_2 {
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
 }
 
-.background_top {
-    background-color: var(--banner-background-color);
-    padding-top: 8rem;
-    -webkit-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.3);
-    box-shadow: -5px 20px 51px -26px rgba(0, 0, 0, 0.3);
-    .title {
-        color: var(--banner-text-color);
+.title {
+    color: var(--banner-text-color);
 
-        .title_primary {
-            font-weight: 700;
-        }
-        .title_secondary {
-            color: var(--banner-text-secondary-color);
-            font-weight: 700;
-        }
-        .sub_title {
-            font-weight: 100;
-            font-size: 1.5em;
-            max-width: 65%;
-        }
-        .title_phrase {
-            font-weight: 100;
-        }
+    .title_primary {
+        font-weight: 700;
     }
-
-    .image_title {
-        display: flex;
-        justify-content: end;
-        margin-bottom: 3rem;
-        img {
-            max-height: 300px;
-        }
+    .title_secondary {
+        color: var(--banner-text-secondary-color);
+        font-weight: 700;
+    }
+    .sub_title {
+        font-weight: 100;
+        font-size: 1.5em;
+        max-width: 65%;
+    }
+    .title_phrase {
+        font-weight: 100;
     }
 }
 
-
+.image_title {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 3rem;
+    img {
+        max-height: 300px;
+    }
+}
 
 /* Meus Projetos*/
 
@@ -148,11 +139,11 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    p, h5 {
-
-    color: var(--text-color);
-    text-align: justify;
-}
+    p,
+    h5 {
+        color: var(--text-color);
+        text-align: justify;
+    }
 }
 .card_hover_base {
     padding: 0.5rem;
@@ -166,9 +157,7 @@
             max-width: 84px;
         }
     }
-
 }
-
 
 .card_hover_base:hover {
     background: rgb(107, 186, 255);
@@ -205,114 +194,101 @@
     margin-top: 1rem;
 }
 
-
 @media (max-width: 500px) {
-
     .grid_cl_2 {
-        grid-template-columns: 1fr 0.6fr ;
+        grid-template-columns: 1fr 0.6fr;
     }
     .container {
-        margin-top:0;
+        margin-top: 0;
         margin-bottom: 0.1rem;
     }
 
-    .background_top {
-        border-radius: 0px 0px 30px 30px;
-        padding:1rem;
-        margin-bottom: 3rem;
-        box-shadow: -5px 20px 51px -18px rgba(0, 0, 0, 0.5);
-        .title {
+    .title {
         width: 100%;
-            .title_primary {
-                color: var(--banner-text-color);
-                font-weight: 700;
-                width: 100%;
-            }
-            .title_secondary {
-                color: var(--banner-text-secondary-color);
-                font-weight: 700;
-            }
-            .sub_title {
-                font-weight: 300;
-                font-size: 1em;
-                max-width: 100%;
-                color: var(--banner-text-color);
-            }
-            .title_phrase{
-                font-weight: 400;
-                font-size: 0.6em;
-            }
+        .title_primary {
+            color: var(--banner-text-color);
+            font-weight: 700;
+            width: 100%;
         }
-
-        .image_title {
-            display: flex;
-            justify-content: end;
-            margin-bottom: 0;
-            align-items: end;
-            img {
-                display: block;
-                max-width: 100%;
-            }
+        .title_secondary {
+            color: var(--banner-text-secondary-color);
+            font-weight: 700;
+        }
+        .sub_title {
+            font-weight: 300;
+            font-size: 1em;
+            max-width: 100%;
+            color: var(--banner-text-color);
+        }
+        .title_phrase {
+            font-weight: 400;
+            font-size: 0.6em;
         }
     }
 
-.margin_top_3{
-    margin-top: 3rem;
-}
+    .image_title {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 0;
+        align-items: end;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
 
-/*CARDS*/
+    .margin_top_3 {
+        margin-top: 3rem;
+    }
+
+    /*CARDS*/
 
     .card_paper {
         margin-bottom: 1rem;
     }
 
-
-
-.card_hover_base {
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: 100%;
-    .card_servico {
-
-        padding: 1rem;
-        background-color: var(--card-background-color);
+    .card_hover_base {
+        padding: 0.5rem;
         border-radius: 10px;
-        div{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        width: 100%;
+        .card_servico {
+            padding: 1rem;
+            background-color: var(--card-background-color);
+            border-radius: 10px;
+            div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            img {
+                max-width: 84px;
+            }
         }
-        img {
-            max-width: 84px;
+    }
+
+    .meus_servicos {
+        color: var(--text-color);
+        h2 {
+            font-weight: 900;
+        }
+        p {
+            font-weight: 400;
+            font-size: 1em;
+            text-align: justify;
+        }
+        .meus_servicos_subtitle {
+            color: #80bdf3;
+            margin-bottom: 1rem;
         }
     }
 
-}
-
-
-.meus_servicos {
-    color: var(--text-color);
-    h2 {
-        font-weight: 900;
+    .meu_cv {
+        padding: 1rem;
+        background-color: var(--button-background-color);
+        color: var(--button-text-color);
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 10px;
+        margin-top: 1rem;
     }
-    p {
-        font-weight: 400;
-        font-size: 1em;
-        text-align: justify;
-    }
-    .meus_servicos_subtitle {
-        color: #80bdf3;
-        margin-bottom: 1rem;
-    }
-}
-
-.meu_cv {
-    padding: 1rem;
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 10px;
-    margin-top: 1rem;
-}
 }

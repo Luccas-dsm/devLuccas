@@ -15,4 +15,8 @@ export class ArtigoService {
 
       return lastValueFrom(this.http.get<ArtigoModel>(`${environment.apiArtigo}Artigo/listarArtigos`));
   }
+  buscarArtigo(id:number): Promise<any> {
+
+      return lastValueFrom(this.http.get<any>(`${environment.apiArtigo}Artigo/buscarArtigo/${id}`));
+  }
 }

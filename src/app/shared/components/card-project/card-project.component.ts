@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CardProjectComponent {
 
-   @Input() imageSoruce:string
+   @Input() imageSource:string
    @Input() title:string
    @Input() description:string
 }

@@ -3,9 +3,11 @@ import { SectionTitleComponent } from 'src/app/shared/components/sectionTitle/se
 import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { CardProjectComponent } from 'src/app/shared/components/card-project/card-project.component';
-import { BannerComponent } from '../../shared/components/banner/banner/banner.component';
 import { ArtigoModel } from 'src/app/shared/Models/artigoModel';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { BannerComponent } from 'src/app/shared/components/banner/banner.component';
+import { BannerSecondaryComponent } from 'src/app/shared/components/banner-secondary/banner-secondary.component';
 @Component({
     selector: 'app-portfolio',
     standalone: true,
@@ -15,6 +17,8 @@ import { NgFor } from '@angular/common';
         SectionTitleComponent,
         BannerComponent,
         NgFor,
+        RouterLink,
+        BannerSecondaryComponent
     ],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss',

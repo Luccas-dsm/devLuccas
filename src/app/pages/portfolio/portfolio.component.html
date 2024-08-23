@@ -5,8 +5,8 @@
     <div class="row">
      <app-section-title class="phrase" title="Projetos" sub_title="Aqui há alguns projetos"></app-section-title>
 
-        <div class="col-md-12 card_grid_projetos" *ngFor="let artigo of artigos">
-          <app-card-project title="{{artigo.titulo}}" description="{{artigo.descricao}}" imageSource = "{{artigo.capa}}" [routerLink]="['/artigo', artigo.id]"></app-card-project>
+        <div class="col-md-12 card_grid_projetos" >
+          <app-card-project *ngFor="let artigo of artigos" title="{{artigo.titulo}}" description="{{artigo.descricao}}" imageSource = "{{artigo.capa}}" [routerLink]="['/artigo', artigo.id]"></app-card-project>
         </div>
 
     </div>

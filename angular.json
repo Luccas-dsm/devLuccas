@@ -3,6 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
+
         "dev-luccas": {
             "projectType": "application",
             "schematics": {
@@ -13,6 +14,7 @@
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",
+
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
@@ -20,10 +22,7 @@
                         "outputPath": "dist/dev-luccas",
                         "index": "src/index.html",
                         "main": "src/main.ts",
-                        "polyfills": [
-                          "zone.js",
-                          "@angular/localize/init"
-                        ],
+                        "polyfills": ["zone.js", "@angular/localize/init"],
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": ["src/favicon.ico", "src/assets"],
@@ -33,9 +32,9 @@
                             "node_modules/quill/dist/quill.core.css",
                             "node_modules/quill/dist/quill.snow.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
                         ],
                         "scripts": []
+
                     },
                     "configurations": {
                         "production": {
@@ -86,9 +85,9 @@
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "polyfills": [
-                          "zone.js",
-                          "zone.js/testing",
-                          "@angular/localize/init"
+                            "zone.js",
+                            "zone.js/testing",
+                            "@angular/localize/init"
                         ],
                         "tsConfig": "tsconfig.spec.json",
                         "karmaConfig": "karma.conf.js",
@@ -100,12 +99,14 @@
                             "node_modules/quill/dist/quill.core.css",
                             "node_modules/quill/dist/quill.snow.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
                         ],
                         "scripts": []
                     }
                 }
             }
         }
+    },
+    "cli": {
+        "analytics": "805e5162-ff3b-4a62-a357-055ae18462a3"
     }
 }

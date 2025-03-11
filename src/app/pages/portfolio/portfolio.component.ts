@@ -1,9 +1,8 @@
-import { ArtigoService } from './../../core/services/artigo/artigo.service';
+import { ArticleDto } from './../../core/Model/article.dto';
 import { SectionTitleComponent } from 'src/app/shared/components/sectionTitle/section-title/section-title.component';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { CardProjectComponent } from 'src/app/shared/components/card-project/card-project.component';
-import { ArtigoModel } from 'src/app/shared/Models/artigoModel';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { BannerComponent } from 'src/app/shared/components/banner/banner.component';
@@ -20,6 +19,7 @@ import { MediumArtigoDto } from 'src/app/shared/Models/medium.model';
         NgFor,
         RouterLink,
         BannerSecondaryComponent,
+        BannerSecondaryComponent,
     ],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss',
@@ -30,7 +30,8 @@ export class PortfolioComponent {
     artigos: ArtigoModel[] = [];
 
     ngOnInit(): void {
-        this.buscarArtigos();
+
+        this.BuscarArtigos();
     }
 
      buscarArtigos() {

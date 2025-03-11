@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-project',
@@ -12,4 +12,11 @@ export class CardProjectComponent {
    @Input() imageSource:string
    @Input() title:string
    @Input() description:string
+
+
+   @Output() cardClick: EventEmitter<any> = new EventEmitter();  // Emitir evento de clique
+
+   onCardClick() {
+       this.cardClick.emit();  // Emite o evento ao clicar
+   }
 }

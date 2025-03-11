@@ -1,24 +1,39 @@
 <app-banner>
-    <app-banner-secondary title="Bem vindo ao meu portifólio!" sub_title=" Aqui tem todos projetos desenvolvidos, artigos e referências."></app-banner-secondary>
+    <app-banner-secondary
+        title="Bem vindo ao meu portifólio!"
+        sub_title=" Aqui tem todos projetos desenvolvidos, artigos e referências."
+    ></app-banner-secondary>
 </app-banner>
 <section class="container section_default">
     <div class="row">
-     <app-section-title class="phrase" title="Projetos" sub_title="Aqui há alguns projetos"></app-section-title>
+        <app-section-title
+            class="phrase"
+            title="Projetos"
+            sub_title="Aqui há alguns projetos"
+        ></app-section-title>
 
-        <div class="col-md-12 card_grid_projetos" >
-          <app-card-project *ngFor="let artigo of artigos" title="{{artigo.titulo}}" description="{{artigo.descricao}}" imageSource = "{{artigo.capa}}" [routerLink]="['/artigo', artigo.id]"></app-card-project>
+        <div class="col-md-12 card_grid_projetos">
+            <app-card-project
+                *ngFor="let artigo of artigos"
+                title="{{ artigo.titulo }}"
+                description="{{ artigo.descricao }}"
+                imageSource="{{ artigo.capa }}"
+                (cardClick)="gotoMedium(artigo.link)"
+            ></app-card-project>
         </div>
-
     </div>
 </section>
 
 <section class="section_secondary">
     <div class="container">
         <div class="row">
-            <app-section-title title="Artigos" sub_title="Aqui há alguns artigos"></app-section-title>
-            <div class="col-md-12 d-flex flex-wrap justify-content-between">
-
-            </div>
+            <app-section-title
+                title="Artigos"
+                sub_title="Aqui há alguns artigos"
+            ></app-section-title>
+            <div
+                class="col-md-12 d-flex flex-wrap justify-content-between"
+            ></div>
         </div>
     </div>
 </section>

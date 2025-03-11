@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiMedium: 'https://medium.devluccas.com.br/api/'
 };

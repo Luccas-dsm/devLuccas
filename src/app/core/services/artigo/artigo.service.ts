@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { ArtigoModel } from 'src/app/shared/Models/artigoModel';
+import { MediumArtigoDto } from 'src/app/shared/Models/medium.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,8 @@ export class ArtigoService {
 
       return lastValueFrom(this.http.get<any>(`${environment.apiArtigo}Artigo/buscarArtigo/${id}`));
   }
+  buscarPost(): Promise<MediumArtigoDto> {
+    return lastValueFrom(this.http.get<MediumArtigoDto>(`${environment.apiMedium}post/findPosts`));
+}
+
 }

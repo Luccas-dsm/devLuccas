@@ -1,11 +1,12 @@
 export class ArtigoModel {
-    result: {
-        Id: number;
-        Capa: string;
-        Titulo: string;
-        Descricao: string;
-        Conteudo: string;
-        Categoria: number;
-        SubCategoria: number;
-    };
+
+        id: number;
+        capa: string;
+        titulo: string;
+        descricao: string;
+        conteudo: string;
+        categoria: number;
+        subCategoria: number;
+        link:string;
+
 }

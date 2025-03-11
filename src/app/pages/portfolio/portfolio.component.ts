@@ -8,6 +8,7 @@ import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { BannerComponent } from 'src/app/shared/components/banner/banner.component';
 import { BannerSecondaryComponent } from 'src/app/shared/components/banner-secondary/banner-secondary.component';
+import { MediumArtigoDto } from 'src/app/shared/Models/medium.model';
 @Component({
     selector: 'app-portfolio',
     standalone: true,
@@ -18,23 +19,45 @@ import { BannerSecondaryComponent } from 'src/app/shared/components/banner-secon
         BannerComponent,
         NgFor,
         RouterLink,
-        BannerSecondaryComponent
+        BannerSecondaryComponent,
     ],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-    constructor(private ArtigoService: ArtigoService) {}
+    constructor(private artigoService: ArtigoService) {}
 
-    artigos: ArtigoModel[];
+    artigos: ArtigoModel[] = [];
 
     ngOnInit(): void {
         this.buscarArtigos();
     }
 
-    buscarArtigos() {
-        this.ArtigoService.buscarArtigos().then((response: any) => {
-            this.artigos = response.result;
+     buscarArtigos() {
+        // this.artigoService.buscarArtigos().then((response: any) => {
+        //     this.artigos = response.result;
+        // });
+
+        this.artigoService.buscarPost().then((response: MediumArtigoDto) => {
+            response.items.forEach((item) => {
+                var artigo: ArtigoModel = {
+                    id: 0,
+                    capa: item.capa,
+                    titulo: item.title,
+                    descricao: '',
+                    conteudo: item.content,
+                    categoria: 0,
+                    subCategoria: 0,
+                    link:item.link
+                };
+                console.log(artigo);
+                this.artigos.push(artigo);
+            });
         });
+    }
+
+    gotoMedium(link:string){
+        console.log(link);
+        window.location.href= link;
     }
 }

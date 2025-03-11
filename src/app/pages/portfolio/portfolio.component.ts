@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
 import { BannerComponent } from 'src/app/shared/components/banner/banner.component';
 import { BannerSecondaryComponent } from 'src/app/shared/components/banner-secondary/banner-secondary.component';
 import { MediumArtigoDto } from 'src/app/shared/Models/medium.model';
+import { MediumService } from 'src/app/core/services/medium.service';
+import { ArtigoModel } from 'src/app/shared/Models/artigoModel';
 @Component({
     selector: 'app-portfolio',
     standalone: true,
@@ -25,13 +27,13 @@ import { MediumArtigoDto } from 'src/app/shared/Models/medium.model';
     styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-    constructor(private artigoService: ArtigoService) {}
+    constructor(private mediumSevice: MediumService) {}
 
     artigos: ArtigoModel[] = [];
 
     ngOnInit(): void {
 
-        this.BuscarArtigos();
+        this.buscarArtigos();
     }
 
      buscarArtigos() {
@@ -39,7 +41,7 @@ export class PortfolioComponent {
         //     this.artigos = response.result;
         // });
 
-        this.artigoService.buscarPost().then((response: MediumArtigoDto) => {
+        this.mediumSevice.buscarPost().then((response: MediumArtigoDto) => {
             response.items.forEach((item) => {
                 var artigo: ArtigoModel = {
                     id: 0,
@@ -57,8 +59,5 @@ export class PortfolioComponent {
         });
     }
 
-    gotoMedium(link:string){
-        console.log(link);
-        window.location.href= link;
-    }
+
 }

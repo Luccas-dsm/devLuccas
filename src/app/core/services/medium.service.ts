@@ -1,7 +1,9 @@
 import { inject, Inject, Injectable } from '@angular/core';
 import { ArticleDto, ItensDto } from '../Model/article.dto';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { lastValueFrom, Observable } from 'rxjs';
+import { MediumArtigoDto } from 'src/app/shared/Models/medium.model';
+import { environment } from '../environments/environment';
 
 @Injectable({
     providedIn: 'root',
@@ -20,5 +22,13 @@ export class MediumService {
             httpOptions
         );
         return artigo;
+    }
+
+    buscarPost(): Promise<MediumArtigoDto> {
+        return lastValueFrom(
+            this.httpClient.get<MediumArtigoDto>(
+                `${environment.apiMedium}post/findPosts`
+            )
+        );
     }
 }

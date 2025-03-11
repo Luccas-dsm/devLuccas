@@ -8,16 +8,16 @@
     <div class="row">
         <app-section-title
             class="phrase"
-            title="Projetos"
-            sub_title="Aqui há alguns projetos"
+            title="Artigos"
+            sub_title="Aqui há alguns artigos"
         ></app-section-title>
 
         <div class="col-md-12 card_grid_projetos" >
             <app-card-project
-            *ngFor="let artigo of artigos.items"
-            [title]="artigo.title"
-            [description]="artigo.description"
-            [imageSource]="artigos.image"
+            *ngFor="let artigo of artigos"
+            [title]="artigo.titulo"
+            [description]="artigo.descricao"
+            [imageSource]="artigo.capa"
             [href]="artigo.link"
             target="_blank">
           </app-card-project>
@@ -25,7 +25,7 @@
     </div>
 </section>
 
-<section class="section_secondary">
+<!-- <section class="section_secondary">
     <div class="container">
         <div class="row">
             <app-section-title title="Artigos" sub_title="Aqui há alguns artigos"></app-section-title>
@@ -34,4 +34,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

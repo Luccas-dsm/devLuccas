@@ -19,7 +19,6 @@ import { ArtigoModel } from 'src/app/shared/Models/artigoModel';
         SectionTitleComponent,
         BannerComponent,
         NgFor,
-        RouterLink,
         BannerSecondaryComponent,
         BannerSecondaryComponent,
     ],

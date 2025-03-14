@@ -1,0 +1,47 @@
+.s-img img{
+    max-width: 100%;
+}
+.sobre_mim {
+
+    color: var(--text-color);
+    h2 {
+        font-weight: 900;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+    .sobre_mim_subtitle {
+        color: #80bdf3;
+        margin-bottom: 1rem;
+    }
+}
+.section_acordion {
+    color: var(--text-color);
+    button {
+        font-weight: 700;
+        font-size: 1.5rem;
+        background-color: #FFF;
+        font-family:"Roboto" ;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+    .section_acordion_subtitle {
+        color: #80bdf3;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 500px) {
+
+    .sobre_mim{
+        margin-top: 2rem;
+    }
+
+    .section_acordion{
+        margin-bottom: 6.5rem;
+    }
+}
